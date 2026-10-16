@@ -19,7 +19,6 @@ Repositório que reúne meus projetos acadêmicos e pessoais de Engenharia de So
 | Projeto | Tipo | Tecnologias |
 |---|---|---|
 | [Apresentação sobre Next.js](projetos-academicos/apresentacao-nextjs) | Acadêmico | Next.js, React |
-| [Sistema de monitoramento de pacientes](projetos-academicos/sistema-monitoramento-pacientes) | Acadêmico | UML, PlantUML |
 | [Site pessoal v1](projetos-pessoais/site-v1) | Pessoal | HTML, CSS, JavaScript |
 
 ## 🏷️ Versões
