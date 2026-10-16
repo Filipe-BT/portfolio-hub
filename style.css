@@ -1,0 +1,195 @@
+/* ===== Variáveis ===== */
+:root {
+  --bg: #0f0b1a;
+  --card: #1a1428;
+  --card-hover: #231b36;
+  --text: #e8e4f3;
+  --muted: #a69fba;
+  --primary: #a0227f;
+  --accent: #ff4fa3;
+  --border: rgba(255, 255, 255, 0.08);
+  --gradient: linear-gradient(135deg, #a0227f 0%, #ff4fa3 100%);
+}
+
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(160, 34, 127, 0.25), transparent 40%),
+    radial-gradient(circle at 85% 10%, rgba(255, 79, 163, 0.12), transparent 35%);
+  background-repeat: no-repeat;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+  text-align: center;
+  padding: 80px 20px 50px;
+}
+
+header h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+header p {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+/* ===== Conteúdo ===== */
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 79, 163, 0.35);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 3px solid transparent;
+  border-image: var(--gradient) 1;
+}
+
+p {
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Listas ===== */
+section ul {
+  list-style: none;
+  margin: 12px 0 20px;
+}
+
+section ul li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+section ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* ===== Cards de projetos (seção Projetos) ===== */
+section:nth-of-type(2) ul li {
+  padding: 14px 18px 14px 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+section:nth-of-type(2) ul li:hover {
+  background: var(--card-hover);
+  transform: translateX(6px);
+}
+
+section:nth-of-type(2) ul li::before {
+  left: 16px;
+  top: 14px;
+}
+
+/* ===== Contato ===== */
+section:nth-of-type(3) p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+section:nth-of-type(3) a {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: var(--gradient);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(160, 34, 127, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:nth-of-type(3) a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 79, 163, 0.45);
+}
+
+/* ===== Rodapé ===== */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 600px) {
+  header {
+    padding: 50px 16px 30px;
+  }
+
+  section {
+    padding: 22px;
+  }
+}

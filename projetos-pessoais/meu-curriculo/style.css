@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    position: relative;
+    background-color: rgb(0, 38, 88);
+    padding: clamp(15px, 3vw, 20px) 0;
+    margin: clamp(40px, 8vw, 80px) 0 clamp(20px, 4vw, 30px) 0;
+    overflow: visible;
+}
+
+h1 {
+    color: white;
+    margin: 0 0 0 clamp(20px, 5vw, 40px);
+    font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+.foto-perfil {
+    position: absolute;
+    top: 50%;
+    right: clamp(20px, 6vw, 60px);
+    transform: translateY(-50%);
+    width: clamp(120px, 15vw, 200px);
+    height: clamp(120px, 15vw, 200px);
+    border-radius: 50%;
+    object-fit: cover;
+    border: clamp(4px, 0.6vw, 6px) solid rgb(0, 38, 88);
+    box-shadow: 0 0 0 4px white;
+}
+
+address {
+    width: 80%;
+    margin: 10px auto 10px auto;
+    font-style: normal;
+}
+
+address strong {
+    color: rgb(0, 38, 88);
+}
+
+section {
+    margin-left: 96px;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+h2 {
+    color: rgb(0, 38, 88);
+    font-weight: 900;
+    margin-left: 0;
+    margin-bottom: 4px;
+    border-bottom: 2px solid rgb(0, 38, 88);
+    padding-bottom: 4px;
+}
+
+section p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+li {
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+#habilidades ul {
+    padding-left: 0;
+}
+
+#habilidades li {
+    list-style: none;
+    display: inline-block;
+    background-color: rgba(0, 38, 88, 0.08);
+    color: rgb(0, 38, 88);
+    padding: 4px 14px;
+    margin: 4px 6px 4px 0;
+    border-radius: 20px;
+}
+
+footer {
+    margin-left: 96px;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+.inf_contato p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    h1 {
+        margin: 0 0 15px 0;
+        font-size: 1.3rem;
+    }
+
+    .foto-perfil {
+        position: static;
+        transform: none;
+        width: 120px;
+        height: 120px;
+    }
+
+    address {
+        width: 90%;
+    }
+
+    section,
+    footer {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .inf_contato p {
+        flex-wrap: wrap;
+    }
+
+    #habilidades li {
+        display: block;
+        width: fit-content;
+    }
+}
